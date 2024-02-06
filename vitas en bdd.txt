@@ -1,0 +1,22 @@
+SELECT usuario_id, usuario_curp, usuario_numero, usuario_nombres, usuario_apellidos, institucion_nombre, categoria_nombre, presea_nombre, usuario_asistencia, implemento_nombre, invitado_nombres, invitado_apellidos
+FROM usuario
+INNER JOIN institucion ON fk_insitucion_id=institucion_id
+INNER JOIN categoria ON fk_categoria_id=categoria_id
+LEFT JOIN presea_usuario ON usuario_id=fk_usuario_id LEFT JOIN presea ON fk_presea_id=presea_id
+LEFT JOIN implemento ON fk_implemento_id=implemento_id
+LEFT JOIN invitado ON fk_invitado_id=invitado_id;
+
+
+
+
+
+SELECT usuario_id, usuario_curp, usuario_numero, usuario_nombres, usuario_apellidos, institucion_nombre, categoria_nombre, presea_nombre, usuario_asistencia, implemento_nombre, invitado_nombres, invitado_apellidos
+FROM usuario
+INNER JOIN institucion ON fk_insitucion_id=institucion_id
+INNER JOIN categoria ON fk_categoria_id=categoria_id
+LEFT JOIN presea_usuario ON usuario_id=fk_usuario_id LEFT JOIN presea ON fk_presea_id=presea_id
+LEFT JOIN implemento ON fk_implemento_id=implemento_id
+LEFT JOIN invitado ON fk_invitado_id=invitado_id
+WHERE fk_rol_id!=2;
+
+SELECT * FROM vista_usuarios;
